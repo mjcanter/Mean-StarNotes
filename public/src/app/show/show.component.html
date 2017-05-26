@@ -1,0 +1,13 @@
+<h1>
+  {{stars | json}}
+</h1>
+<form (submit)="onNewnote()">
+<p>New Note</p>
+    <input type="text" name="text"  
+    minlength="4" 
+    [(ngModel)]="note.text"
+    #first_name='ngModel'>
+    <input type="submit">
+</form>
+<a [routerLink]="['/new']">New Star!</a>
+<a [routerLink]="['/home']">Home</a>

@@ -1,0 +1,12 @@
+<h1>Star Registry<h2>
+<p>All stars in the registry</p>
+<a [routerLink]="['/new']">register a new star</a>
+<a [routerLink]="['/login']">logout</a>
+<a [routerLink]="['/dashboard']">dashboard</a>
+<p *ng-repeat='let star in stars'>
+	<a [routerLink]="['/show', star._id]">{{ star.name }}</a> 
+  	{{ star.description }} {{ star.notes.length }} 
+  	<a [routerLink]="['/edit', star._id]">edit</a> 
+  	<a [routerLink]="['/delete', star._id]">delete</a>	
+</p>
+

@@ -1,0 +1,14 @@
+<form (submit)="onSubmit()">
+<p>Name</p>
+    <input type="text" name="name"  
+    minlength="4" 
+    [(ngModel)]="star.name"
+    #first_name='ngModel'>
+<p>Description</p>
+    <input type="text" name="description" 
+    [(ngModel)]="star.description"
+    #last_name='ngModel'>
+    <input type="submit">
+</form>
+<a [routerLink]="['/new']">New Star!</a>
+<a [routerLink]="['/home']">Home</a>
